@@ -5,13 +5,13 @@ def min_number(source, target):
     count = 0   
     while j < target_len:
         i = 0
-        current_match = False
+        match = False
         while i < source_len:
             if j < target_len and source[i] == target[j]:
                 j += 1
-                current_match = True
+                match = True
             i += 1
-        if not current_match:
+        if not match:
             return -1
         count += 1
     return count
